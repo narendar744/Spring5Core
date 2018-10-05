@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	<context:property-placeholder
+		location="classpath:email.properties" />
+	<bean id="student" class="com.spring5.collection.springIoc.Student">
+		<property name="name" value="narendar reddy" />
+		<property name="payments">
+			<list value-type="java.lang.String">
+				<value>credit card</value>
+				<value>debit card</value>
+				<value>check</value>
+			</list>
+		</property>
+		<property name="subjects" >
+		<set value-type="java.lang.String">
+		<value>mathematics</value>
+		<value>physics</value>
+		<value>mathematics</value>
+		
+		</set>
+		</property>
+		<property name="marks">
+			<map>
+				<entry key="mathematics" value="98" />
+				<entry key="physics" value="89" />
+			</map>
+		</property>
+		<property name="emails">
+			<props>
+				<prop key="office">"${email1}"</prop>
+				<prop key="personal">"${email2}"</prop>
+			</props>
+
+		</property>
+		<property name="address" ref="add"></property>
+		<property name="greeting" ref="message"></property>
+	</bean>
+	<bean id="add"
+		class="com.spring5.collection.springIoc.address.Address">
+		<property name="city" value="narayanpet"></property>
+	</bean>
+	<bean id="message"
+		class="com.spring5.collection.springIoc.greeting.Wish">
+
+	</bean>
+</beans>
