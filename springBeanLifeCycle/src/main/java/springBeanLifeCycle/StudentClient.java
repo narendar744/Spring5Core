@@ -9,6 +9,7 @@ public class StudentClient {
 		Student student = context.getBean("lifecycle", Student.class);
 		System.out.println(student.toString());
 		context.close();
+		
 	}
 
 }

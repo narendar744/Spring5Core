@@ -5,7 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 <context:property-placeholder location="classpath:student.properties"/>
-<bean id="lifecycle" class="springBeanLifeCycle.Student" init-method="startup" destroy-method="sleep" scope="singleton">
+<bean id="lifecycle" class="springBeanLifeCycle.Student" init-method="startup" destroy-method="sleep" scope="prototype">
 <property name="name" value="${myname}"/>
 <property name="city" value="${mycity}"></property>
 
