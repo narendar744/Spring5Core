@@ -1,5 +1,6 @@
 package com.spring5.componentAnnotation;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 //@Component("morning")
@@ -7,6 +8,17 @@ import org.springframework.stereotype.Component;
 public class Greeting implements Morning {
 	
 	private String name="narendar";
+	@Autowired
+	public Greeting() {
+		super();
+	}
+	public String syaevening() {
+		return "hello narendar";
+	}
+
+	
+
+	
 
 	public String getName() {
 		return name;
@@ -22,5 +34,4 @@ public class Greeting implements Morning {
 		return "hello good morning "+name;
 	}
 	
-
 }

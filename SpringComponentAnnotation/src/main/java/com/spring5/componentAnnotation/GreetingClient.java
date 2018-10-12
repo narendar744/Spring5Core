@@ -3,6 +3,10 @@ package com.spring5.componentAnnotation;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+/**
+ * @author Narendar
+ *
+ */
 public class GreetingClient {
 
 	public static void main(String[] args) {
