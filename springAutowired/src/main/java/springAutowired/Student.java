@@ -35,5 +35,13 @@ public class Student implements Activities {
 	public String writing() {
 		return name + " is writing Exam today and " + payment.useDebitCard();
 	}
+	
+	@Autowired
+	public void gamesFee(Payment payment) {
+		System.out.println(name + " is playing games and " + payment.useDebitCard());
+	
+		
+	}
+	
 
 }

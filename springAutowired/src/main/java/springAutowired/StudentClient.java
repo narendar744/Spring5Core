@@ -10,6 +10,7 @@ ApplicationContext context = new ClassPathXmlApplicationContext("component-appli
 Activities activities= context.getBean("student",Activities.class);
 System.out.println(activities.reading());
 System.out.println(activities.writing());
+
 	}
 
 }
