@@ -2,10 +2,11 @@ package com.spring5.lifecycle;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-
+//@Scope("prototype")
 public class Student implements Greeting{
 
 	@PostConstruct
