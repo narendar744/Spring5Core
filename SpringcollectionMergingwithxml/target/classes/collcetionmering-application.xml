@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	<bean id="computers" class="com.spring5.collectionMerging.College">
+		<property name="branch" value="computer science"></property>
+		<property name="subjects">
+			<set value-type="java.lang.String">
+				<value>DBA</value>
+				<value>java</value>
+				<value>networking</value>
+			</set>
+		</property>
+
+	</bean>
+	
+	
+	<bean id="computers and networking" class="com.spring5.collectionMerging.College" parent="computers">
+		<property name="branch" value="computer science"></property>
+		<property name="subjects">
+			<set value-type="java.lang.String" merge="true">
+				<value>Network Security</value>
+				
+			</set>
+		</property>
+
+	</bean>
+
+</beans>
