@@ -15,7 +15,7 @@ public class Student implements Payment{
 	
 @Override
 	public String message() {
-		return "payment done";
+		return "payment done immidiately ";
 	
 	}
 
